@@ -1,0 +1,29 @@
+Verificar se o servico de RPC do SO esta instalado
+$rpcinfo
+
+Para instalar o servico
+$sudo apt-get update
+$sudo apt-get install rpcbind
+
+Ordem de compilacao dos programas
+
+rpcgen calc.x
+gcc -c calc_clnt.c
+gcc -c calc_svc.c
+gcc -c calc_xdr.c
+
+gcc -c rpcClient.c
+gcc -c rpcServer.c
+
+gcc -o client calc_clnt.o calc_xdr.o rpcClient.o
+gcc -o server calc_svc.o calc_xdr.o rpcServer.o
+
+
+Em um terminal executar o servidor + ip
+./server 127.0.0.1
+
+
+Em outro terminal ou computador, executar o client + ip
+./client 127.0.0.1
+
+
