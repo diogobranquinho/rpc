@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
       printf("Val2 ");
       scanf("%d", &val.in2);
       // chamando o procedimentl remoto
-      res = mult_1(&val, cl);
+      res = mult_1(&val, con);
       if (res == NULL)
         printf("a conexao falhou...");
       else
