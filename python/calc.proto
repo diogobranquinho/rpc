@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package calc;
+
+// A mensagem de entrada contendo dois inteiros.
+message parametrosCalculo {
+  int32 in1 = 1;
+  int32 in2 = 2;
+}
+
+// A mensagem de resposta contendo o resultado.
+message resultadoCalculo {
+  int32 result = 1;
+}
+
+// O serviço que define as operações de soma e multiplicação.
+service Calculadora {
+  rpc soma (parametrosCalculo) returns (resultadoCalculo) {}
+  rpc multiplica (parametrosCalculo) returns (resultadoCalculo) {}
+}

@@ -14,6 +14,6 @@ struct in{
 program MEU_RPC_SERVER {   /*Nome do Programa remoto*/
     version CALCULADORA {  /* Declaracao do numero da versao do programa*/
         int soma(in) = 1;  /* procedimento numero = 1 */
-	int mult(in) = 2;  /* procedimento numero = 2 */
+	    int mult(in) = 2;  /* procedimento numero = 2 */
     } = 1;	           /* definicao da versao do programa = 1*/
 } = 0x3012225;	           /* numero do programa remoto (deve ser unico)*/

@@ -1,29 +1,15 @@
-Verificar se o servico de RPC do SO esta instalado
-$rpcinfo
+# Exemplos de RPC
 
-Para instalar o servico
-$sudo apt-get update
-$sudo apt-get install rpcbind
+Este repositório contém exemplos de implementação de Remote Procedure Call (RPC) usando diferentes tecnologias e linguagens de programação.
 
-Ordem de compilacao dos programas
+## Estrutura do Repositório
 
-rpcgen calc.x
-gcc -c calc_clnt.c
-gcc -c calc_svc.c
-gcc -c calc_xdr.c
+- `/python`: Contém um exemplo de implementação de RPC usando Python e gRPC.
+- `/c_linux`: Contém um exemplo de implementação de RPC em C para sistemas Linux.
 
-gcc -c rpcClient.c
-gcc -c rpcServer.c
+## Utilização
 
-gcc -o client calc_clnt.o calc_xdr.o rpcClient.o
-gcc -o server calc_svc.o calc_xdr.o rpcServer.o
+Para informações detalhadas sobre como configurar e executar os exemplos em diferentes ambientes, consulte os arquivos `README.md` localizados em cada diretório:
 
-
-Em um terminal executar o servidor + ip
-./server 127.0.0.1
-
-
-Em outro terminal ou computador, executar o client + ip
-./client 127.0.0.1
-
-
+- [Python RPC Example](/python/README.md)
+- [C/Linux RPC Example](/c_linux/README.md)
